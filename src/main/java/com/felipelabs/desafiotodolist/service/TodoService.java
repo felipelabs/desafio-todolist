@@ -20,9 +20,7 @@ public class TodoService {
   TodoRepository todoRepository;
 
   public List<Todo> list(){
-    Sort sort = Sort.by(Direction.DESC, "prioridade")
-    .and(Sort.by(Direction.ASC, "id"));
-
+    Sort sort = Sort.by(Direction.DESC, "prioridade");
     return todoRepository.findAll(sort);
   }
 
